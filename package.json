@@ -1,0 +1,22 @@
+{
+  "name": "relias",
+  "version": "1.0.0",
+  "description": "Short project to build a simple webpage that allows users to search for a movie through an API, TMDB API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdeluca1/Relias.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sdeluca1/Relias/issues"
+  },
+  "homepage": "https://github.com/sdeluca1/Relias#readme",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}
