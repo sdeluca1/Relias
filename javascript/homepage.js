@@ -7,13 +7,23 @@ async function movieSearch(keyword) {
 $(".searchButton").on('click', async function() {
     $(".results").empty()
       let searchQuery = $(".searchBar").val()
-      if (searchQuery != "") {
+        if (searchQuery == "") {
+            alert("I'm sorry, your search did not match any movies in our records. :( Try again to find more movies!")
+        } else {
       let searchResult = await movieSearch(searchQuery)
-     console.log(searchResult)
+      if (searchResult.results.length == 0) {
+        alert("I'm sorry, your search did not match any movies in our records. :( Try again to find more movies!")
+        $(".results").append("<p> No movies found containing " + searchQuery + "." + "</p>")
+     }
+      console.log(searchResult)
      searchResult.results.forEach(i => {
-         $(".results").append("<p>"+ i.original_title +"</p>")
+         $(".results").append("<li>"+ i.original_title + ' <button class = "overview">Overview </button>' + "</li>")
+         $(".overview").on('click', async function() {
+             //$(".results").append("<p>" + i.overview + "</p")
+             alert("Overview of " + i.original_title + " :" + i.overview)
+         });
      });
-      } 
+    }
 })
 
 
