@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+body {
+    background-color: #99badd;
+}
+
+h1 {
+    text-align: center;
+    text-decoration:underline;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+button {
+    background-color:rgb(223, 174, 155);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: none;
+    border-radius: 15px;
+    padding: 3px 8px;
+    box-shadow: 0 9px rgb(173, 151, 151);
+    margin: 10px;
+}
+
+button:hover {
+    background-color:rgb(175, 85, 75);
+}
+button:active {
+    background-color:rgb(223, 174, 155);
+    box-shadow: 0 5px #666;
+    transform: translateY(2px);
+}
+
+.searchBar, .ratBar, .yearBar {
+    border-radius: 7px;
+    margin: 5px;
+
+
+}
+
+
+.trendingResults { /*not done*/
+    background:rgb(230, 123, 62);
+    right: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sources {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: fixed;
+    bottom: 0px;
+}

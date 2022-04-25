@@ -97,7 +97,7 @@ $(".trendingButton").on('click', async function() {
       let trendingResult = await getTrending()
       console.log(trendingResult)
       trendingResult.results.forEach(i => {
-          $(".trendingResults").append("<li>" + i.title + "</li>")
+          $(".trendingResults").append('<li class = "trendingMovies">' + i.title + "</li>")
       })  
 })
 
