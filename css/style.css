@@ -1,24 +1,29 @@
 @charset "utf-8";
 
 body {
-    background-color: #99badd;
+    margin-left: 50px;
 }
 
 h1 {
-    text-align: center;
+    text-align: left;
     text-decoration:underline;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 
+.instlist {
+    text-align: left;
+}
 button {
-    background-color:rgb(223, 174, 155);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border: none;
     border-radius: 15px;
     padding: 3px 8px;
     box-shadow: 0 9px rgb(173, 151, 151);
-    margin: 10px;
+    margin: 3px;
+}
+
+.yearSearch {
+    margin-bottom: 10px;
 }
 
 button:hover {
@@ -32,36 +37,16 @@ button:active {
 
 .searchBar, .ratBar, .yearBar {
     border-radius: 7px;
-    margin: 5px;
 
 
+}
+
+.pTrend {
+    margin-top: 5px;
 }
 
 
 .trendingResults { /*not done*/
-    background:rgb(230, 123, 62);
+    margin-bottom: 10px;
     right: 3px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.sources {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    position: fixed;
-    bottom: 0px;
 }

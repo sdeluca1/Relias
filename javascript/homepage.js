@@ -24,7 +24,7 @@ $(".searchButton").on('click', async function() { //Main function: Movie Title S
         console.log(searchResult)
             $(".titleResults").append("<p> There are " + searchResult.total_results + " results from your search. Currently displaying page " + pageNumber + " of " + searchResult.total_pages + ".")
         searchResult.results.forEach(i => {
-            $(".titleResults").append('<li class = "movieTitle">'+ i.original_title + "</li>")  
+            $(".titleResults").append('<ul class = "movieTitle">'+ i.original_title + "</ul>")  
         });
         }
 })
@@ -54,7 +54,7 @@ $(".ratingButton").on('click', async function() {//function to search for movies
         console.log(ratResult)
         $(".titleResults").append("<p> There are " + ratResult.total_results + " results from your search. Currently displaying page " + pageNumber + " of " + ratResult.total_pages + ".")
         ratResult.results.forEach(i => {
-            $(".titleResults").append('<li class = "avgRat">' + i.original_title + " Average Rating: " + i.vote_average + "</li>")
+            $(".titleResults").append('<ul class = "avgRat">' + i.original_title + '<li class = "average">' + "Average Rating: " + i.vote_average + "</li>" + "</ul>")
         });
         }
 })
@@ -84,19 +84,11 @@ $(".yearButton").on('click', async function() {
             console.log(yearResult)
             $(".titleResults").append("<p> There are " + yearResult.total_results + " results from your search. Currently displaying page " + pageNumber + " of " + yearResult.total_pages + ".")
             yearResult.results.forEach(i => {
-                $(".titleResults").append('<li class = "yearRes">' + i.original_title + " Release Date: " + i.release_date + "</li>")
+                $(".titleResults").append('<ul class = "yearRes">' + i.original_title + '<li class = "year">' + " Release Date: " + i.release_date + "</li>" + "</ul>")
             });
         }
 })
 
-/*$(".overview").on('click', async function() {
-    searchResult.results.forEach(j=> {
- $(".results").append("<p>" + j.overview + "</p")
-})
-
-    alert("Overview of " + i.original_title + ": " + i.overview)
-});
-*/
 
 async function getTrending(){ //Gets the top trending movies in the database.
     let tmovies = await fetch("https://api.themoviedb.org/3/trending/movie/day?api_key=46ae1d2187fb631facdf70783362f90a")
@@ -106,13 +98,15 @@ async function getTrending(){ //Gets the top trending movies in the database.
 
 $(".trendingButton").on('click', async function() {
     $(".trendingResults").empty()
-    $(".trendingResults").append("<p>" + "Trending Movies:" + "</p>")
+    $(".trendingResults").append("<p class='pTrend'>" + "Trending Movies:" + "</p>")
       let trendingResult = await getTrending()
       console.log(trendingResult)
       trendingResult.results.forEach(i => {
-          $(".trendingResults").append('<li class = "trendingMovies">' + i.title + "</li>")
+          $(".trendingResults").append('<ul class = "trendingMovies">' + i.title + "</ul>")
       })  
 })
 
-
+$(".clearTrending").on('click', async function() {
+    $(".trendingResults").empty()
+})
 
